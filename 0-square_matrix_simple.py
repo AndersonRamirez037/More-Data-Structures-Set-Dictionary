@@ -1,8 +1,3 @@
 def square_matrix_simple(matrix=[]):
-    square_matrix = []
-    for fila in matrix:
-        nueva_fila = []
-        for i in fila: 
-            nueva_fila.append(i ** 2)
-        square_matrix.append(nueva_fila)
+    square_matrix = [list(map(lambda i: i * i, row)) for row in matrix]
     return square_matrix
